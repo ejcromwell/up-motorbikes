@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\owner;
+use App\Owner;
 use Illuminate\Http\Request;
 
 class OwnerController extends Controller

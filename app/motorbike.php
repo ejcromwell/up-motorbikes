@@ -19,6 +19,7 @@ class Motorbike extends Model
 
         $output = DB::table('motorbikes')
                   ->leftJoin('owners', 'motorbikes.id', '=', 'owners.motorbike_id')
+                  ->orderBy('owners.name', 'ASC')
                   ->get();
 
         return $output;
