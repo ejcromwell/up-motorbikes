@@ -10,7 +10,11 @@ class Motorbike extends Model
 {
 
     /**
-     * Get all motorbikes and show if they have owners.
+     * Main function for the second part of the question.
+     * Using a left join to pull results from the
+     * motorbikes table and matching on motorbike_id
+     * as the lookup key.
+     *
      *
      * @return arr
      **/

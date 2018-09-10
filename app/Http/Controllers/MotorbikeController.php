@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Motorbike;
 use Illuminate\Http\Request;
 
+
 class MotorbikeController extends Controller
 {
     /**
@@ -14,7 +15,11 @@ class MotorbikeController extends Controller
      */
     public function index(Motorbike $motorbikes)
     {
-
+        /**
+         * Main part of question one. Pull all results from the Motorbikes
+         * table, group by colour and then sort the output.
+         *
+         **/
         $colour_count = $motorbikes->all()->groupBy('colour')->sortKeys();
 
         $motorbikes = $motorbikes->get_motorbikes_and_owners();

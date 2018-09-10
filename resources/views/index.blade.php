@@ -34,7 +34,7 @@
 
                         <tr>
                             <td>{{ $key }}</td>
-                            <td><?php echo count($value) ?></td>
+                            <td><?= ($value) ? count($value) : ''; ?></td>
                         </tr>
 
                     @endforeach
