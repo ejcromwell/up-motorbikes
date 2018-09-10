@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\motorbike;
+use App\Motorbike;
 use Illuminate\Http\Request;
 
 class MotorbikeController extends Controller
@@ -12,9 +12,14 @@ class MotorbikeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Motorbike $motorbikes)
     {
-        //
+
+        $colour_count = Motorbike::all()->groupBy('colour')->sortKeys();
+
+        $motorbikes = $motorbikes->get_motorbikes_and_owners();
+
+        return view('index', compact('colour_count', 'motorbikes'));
     }
 
     /**
