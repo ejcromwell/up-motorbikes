@@ -15,6 +15,9 @@ class CreateMotorbikesTable extends Migration
     {
         Schema::create('motorbikes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('brand');
+            $table->string('colour');
+            $table->integer('year');
             $table->timestamps();
         });
     }
