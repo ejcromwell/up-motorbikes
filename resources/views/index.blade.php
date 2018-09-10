@@ -18,7 +18,7 @@
                      <th>Colour</th>
                      <th>Total</th>
                 </tr>
-                @foreach ($motorbikes as $key => $value)
+                @foreach ($colour_count as $key => $value)
                     <tr>
                         <td>{{ $key }}</td>
                         <td><?php echo count($value) ?></td>
@@ -36,20 +36,15 @@
                    <th>Colour</th>
                    <th>Model Year</th>
                 </tr>
-                <tr>
-                    <td>
-                        output
-                    </td>
-                    <td>
-                        output
-                    </td>
-                    <td>
-                        output
-                    </td>
-                    <td>
-                        output
-                    </td>
-                </tr>
+
+                @foreach ($motorbikes as $motorbike)
+                    <tr>
+                        <td><?= ($motorbike->name) ? $motorbike->name : 'NULL'; ?></td>
+                        <td>{{ $motorbike->brand }}</td>
+                        <td>{{ $motorbike->colour }}</td>
+                        <td>{{ $motorbike->year }}</td>
+                    </tr>
+                @endforeach
            </table>
         </section>
     </body>
