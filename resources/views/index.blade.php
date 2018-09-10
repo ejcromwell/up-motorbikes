@@ -23,8 +23,8 @@
                 <table class="table table-striped table-sm">
                     <thead>
                         <tr>
-                             <th>Colour</th>
-                             <th>Total</th>
+                            <th>Colour</th>
+                            <th>Total</th>
                         </tr>
 
                     </thead>
@@ -58,12 +58,14 @@
                     <tbody>
 
                     @foreach ($motorbikes as $motorbike)
+
                         <tr>
                             <td><?= ($motorbike->name) ? $motorbike->name : 'NULL'; ?></td>
                             <td>{{ $motorbike->brand }}</td>
                             <td>{{ $motorbike->colour }}</td>
                             <td>{{ $motorbike->year }}</td>
                         </tr>
+
                     @endforeach
 
                     </tbody>
